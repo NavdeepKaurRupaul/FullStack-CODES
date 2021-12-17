@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body {
+			font-family: sans-serif;
+		}
+
+		[data-title] {
+			outline: red dotted 1px;
+			/*optional styling*/
+			font-size: 30px;
+			/*optional styling*/
+
+			position: relative;
+			cursor: help;
+		}
+
+		[data-title]:hover::before {
+			content: attr(data-title);
+			position: absolute;
+			bottom: -26px;
+			display: inline-block;
+			padding: 3px 6px;
+			border-radius: 2px;
+			background: #000;
+			color: #fff;
+			font-size: 25px;
+			font-family: sans-serif;
+			white-space: nowrap;
+		}
+
+		[data-title]:hover::after {
+			content: '';
+			position: absolute;
+			bottom: -10px;
+			left: 8px;
+			display: inline-block;
+			color: #fff;
+			border: 8px solid transparent;
+			border-bottom: 8px solid #000;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Styling html title tooltip</h1>
+	<span data-title="Here is some text for example">Hover me</span>
+</body></html>

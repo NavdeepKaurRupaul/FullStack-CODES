@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		function addop(refin) {
+			var option = document.createElement("option");
+			option.text = "yes1";
+			refin.appendChild(option);
+			var option = document.createElement("option");
+			option.text = "yes2";
+			refin.appendChild(option);
+			var option = document.createElement("option");
+			option.text = "yes3";
+			refin.appendChild(option);
+		}
+		function reemove(refin){
+//			refin.remove(0); to remove from at index 0
+			for(var i=0; i<3;i++){
+				alert(refin[0].value)
+				refin.remove(0);
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<center>
+		<br><br><br>
+		<select name="" id="" onchange="addop(inn);">
+			<option value=""></option>
+			<option value="">1</option>
+			<option value="">2</option>
+			<option value="">3</option>
+			<option value="">4</option>
+			<option value="">5</option>
+		</select>
+		<br><br><br>
+		<select name="" id="inn" size="4"></select>
+		<br><br><br>
+		<input type="button" value="clear" onclick="reemove(inn);">
+	</center>
+</body></html>

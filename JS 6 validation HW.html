@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Marksheet</title>
+	<style>
+		table {
+			background-image: linear-gradient(to right, #8fe8fd, white, #8fe8fd);
+			margin-top: 50px;
+			border: 1px solid black;
+			width: 750px;
+			box-shadow: 0px 0px 20px black;
+		}
+
+		tr {
+			text-align: center;
+			font-size: 25px;
+		}
+
+		td {
+			padding: 10px;
+		}
+
+		#head {
+			color: #e804b3;
+			text-transform: uppercase;
+			background-color: #aaaaaa;
+			padding: 10px;
+			font-size: 30px;
+			border-bottom: 2px solid black;
+			border-top: 2px solid black;
+			font-weight: bold;
+			text-shadow: 1px 0 0 black, -1px 0 0 black, 0 1px 0 black, 0 -1px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+		}
+
+		input[type="text"] {
+			text-align: center;
+			padding: 10px;
+			font-size: 20px;
+			background-color: #ffffa8;
+		}
+
+		input[type="button"] {
+			text-align: center;
+			padding: 5px;
+			font-size: 20px;
+			background-color: #1c1c1c;
+			color: white;
+			border: 1px solid white;
+			transition: ease all 1s;
+
+		}
+
+		input[type="button"]:hover {
+			background-color: white;
+			color: black;
+			border: 1px solid black;
+			transform: scale(1.2);
+			z-index: 1;
+			box-shadow: 0px 0px 20px black;
+			transition: ease all 1s;
+		}
+
+		span {
+			color: red;
+		}
+	</style>
+	<script>
+		function findname() {
+			var n = "Welcome" + " " + prompt("Your Name");
+			document.getElementById("name").value = n;
+		}
+
+		function sum() {
+			var refa = document.getElementById("textcpp").value;
+			if (refa == "") {
+				alert("Enter CPP marks!");
+				document.getElementById("textcpp").focus();
+				return;
+			}
+			var x = parseFloat(refa);
+			var refb = document.getElementById("textsql").value;
+			if (refb == "") {
+				alert("Enter SQL marks!");
+				document.getElementById("textsql").focus();
+				return;
+			}
+			var y = parseFloat(refb);
+			var refc = document.getElementById("textwebd").value;
+			if (refc == "") {
+				alert("Enter WEB DEV marks!");
+				document.getElementById("textwebd").focus();
+				return;
+			}
+			var z = parseFloat(refc);
+			var d = x + y + z;
+			document.getElementById("res").value = d + " Out of 300";
+			alert("Done");
+		}
+
+		function checkcpp() {
+			var refa = document.getElementById("textcpp").value;
+			if (refa == "") {
+				document.getElementById("errcpp").style.color = "red";
+				document.getElementById("errcpp").style.fontSize = "15px";
+				document.getElementById("textcpp").style.backgroundColor = "#fa8e8e";
+				document.getElementById("errcpp").innerHTML = " Marks can't be 0";
+//				document.getElementById("textcpp").focus();
+			}
+			if (isNaN(refa)) {
+				document.getElementById("errcpp").style.color = "red";
+				document.getElementById("errcpp").style.fontSize = "15px";
+				document.getElementById("textcpp").style.backgroundColor = "#fa8e8e";
+				document.getElementById("errcpp").innerHTML = " Marks must be numeric value";
+//				document.getElementById("textcpp").focus();
+			}
+			var a = parseFloat(refa);
+			if (a > 100) {
+				document.getElementById("errsql").style.color = "red";
+				document.getElementById("errsql").style.fontSize = "15px";
+				document.getElementById("textsql").style.backgroundColor = "#fa8e8e"
+				document.getElementById("errcpp").innerHTML = " Marks must be less than 100";
+//				document.getElementById("textcpp").focus();
+			}
+			if (a <= 0) {
+				document.getElementById("errsql").style.color = "red";
+				document.getElementById("errsql").style.fontSize = "15px";
+				document.getElementById("textsql").style.backgroundColor = "#fa8e8e"
+				document.getElementById("errcpp").innerHTML = " Marks must be greater than 0";
+//				document.getElementById("textcpp").focus();
+			}
+		}
+
+		function checksql() {
+			var refa = document.getElementById("textsql").value;
+			if (refa == "") {
+				document.getElementById("errsql").style.color = "red";
+				document.getElementById("errsql").style.fontSize = "15px";
+				document.getElementById("textsql").style.backgroundColor = "#fa8e8e";
+				document.getElementById("errsql").innerHTML = " Marks can't be 0";
+//				document.getElementById("textsql").focus();
+			}
+			if (isNaN(refa)) {
+				document.getElementById("errsql").style.color = "red";
+				document.getElementById("errsql").style.fontSize = "15px";
+				document.getElementById("textsql").style.backgroundColor = "#fa8e8e";
+				document.getElementById("errsql").innerHTML = " Marks must be numeric value";
+//				document.getElementById("textsql").focus();
+			}
+			var a = parseFloat(refa);
+			if (a > 100) {
+				document.getElementById("errsql").style.color = "red";
+				document.getElementById("errsql").style.fontSize = "15px";
+				document.getElementById("textsql").style.backgroundColor = "#fa8e8e"
+				document.getElementById("errsql").innerHTML = " Marks must be less than 100";
+//				document.getElementById("textsql").focus();
+			}
+			if (a <= 0) {
+				document.getElementById("errsql").style.color = "red";
+				document.getElementById("errsql").style.fontSize = "15px";
+				document.getElementById("textsql").style.backgroundColor = "#fa8e8e"
+				document.getElementById("errsql").innerHTML = " Marks must be greater than 0";
+//				document.getElementById("textsql").focus();
+			}
+		}
+
+		function checkwebd() {
+			var refa = document.getElementById("textwebd").value;
+			if (refa == "") {
+				document.getElementById("errwebd").style.color = "red";
+				document.getElementById("errwebd").style.fontSize = "15px";
+				document.getElementById("textwebd").style.backgroundColor = "#fa8e8e";
+				document.getElementById("errwebd").innerHTML = " Marks can't be 0";
+//				document.getElementById("textwebd").focus();
+			}
+			if (isNaN(refa)) {
+				document.getElementById("errwebd").style.color = "red";
+				document.getElementById("errwebd").style.fontSize = "15px";
+				document.getElementById("textwebd").style.backgroundColor = "#fa8e8e";
+				document.getElementById("errwebd").innerHTML = " Marks must be numeric value";
+//				document.getElementById("textwebd").focus();
+			}
+			var a = parseFloat(refa);
+			if (a > 100) {
+				document.getElementById("errwebd").style.color = "red";
+				document.getElementById("errwebd").style.fontSize = "15px";
+				document.getElementById("textwebd").style.backgroundColor = "#fa8e8e"
+				document.getElementById("errwebd").innerHTML = " Marks must be less than 100";
+//				document.getElementById("textwebd").focus();
+			}
+			if (a <= 0) {
+				document.getElementById("errwebd").style.color = "red";
+				document.getElementById("errwebd").style.fontSize = "15px";
+				document.getElementById("textwebd").style.backgroundColor = "#fa8e8e"
+				document.getElementById("errwebd").innerHTML = " Marks must be greater than 0";
+//				document.getElementById("textwebd").focus();
+			}
+		}
+
+		function per() {
+			var a = document.getElementById("textcpp").value;
+			if (a == "") {
+				alert("Enter CPP marks!");
+//				document.getElementById("textcpp").focus();
+				return;
+			}
+			var b = document.getElementById("textsql").value;
+			if (b == "") {
+				alert("Enter SQL marks!");
+//				document.getElementById("textsql").focus();
+				return;
+			}
+			var c = document.getElementById("textwebd").value;
+			if (c == "") {
+				alert("Enter WEB DEV marks!");
+//				document.getElementById("textwebd").focus();
+				return;
+			}
+			var d = ((parseFloat(a) + parseFloat(b) + parseFloat(c)) / 300) * 100;
+			var ans = d;
+			document.getElementById("res").value = ans.toFixed(2) + "%";
+			alert("Done");
+		}
+
+		function doclear() {
+			document.getElementById("textcpp").value = "";
+			document.getElementById("textsql").value = "";
+			document.getElementById("textwebd").value = "";
+			document.getElementById("res").value = "";
+		}
+	</script>
+</head>
+
+<body bgcolor="#f0f0f0">
+	<center>
+		<table>
+			<tr>
+				<td colspan="3" id="head">
+					Find Your Total Marks/Marks Percentage
+				</td>
+			</tr>
+<!--
+			<tr>
+				<td colspan="2">
+					<input type="Button" value="Start" style="transform: none; background-color: skyblue; color: black" onclick="findname();">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="text" style="padding: 0px" id="name"></td>
+			</tr>
+-->
+			<tr>
+				<td>CPP</td>
+				<td><input type="text" placeholder="Enter your marks here" id="textcpp" onblur="checkcpp();"><span id="errcpp">*</span></td>
+			</tr>
+			<tr>
+				<td>SQL</td>
+				<td><input type="text" placeholder="Enter your marks here" id="textsql" onblur="checksql();"><span id="errsql">*</span></td>
+			</tr>
+			<tr>
+				<td>WEB DEV</td>
+				<td><input type="text" placeholder="Enter your marks here" id="textwebd" onblur="checkwebd();"><span id="errwebd">*</span></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="Total" onclick="sum();"></td>
+				<td><input type="button" value="Percentage" onclick="per();"></td>
+			</tr>
+			<tr>
+				<td>
+					Result
+				</td>
+				<td>
+					<input type="text" placeholder="Your Result is" id="res">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="button" value="New Entery" onclick="doclear();">
+				</td>
+			</tr>
+		</table>
+	</center>
+</body></html>

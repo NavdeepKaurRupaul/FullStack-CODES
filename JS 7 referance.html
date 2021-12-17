@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Reference Variable</title>
+	<script>
+		function readval() {
+			var refr = document.getElementById("read");
+			var r = refr.value;
+			var refp = document.getElementById("put");
+			refp.value = r;
+		}
+
+		function check() {
+			document.getElementById("s").innerHTML = "hi"
+		}
+
+	</script>
+</head>
+
+<body>
+	<input type="text" id="read" onblur="check();">
+	<input type="button" value="ok" onclick="readval();">
+	<br><br>
+	<input type="text" id="put"><span id="s">*</span>
+</body>
+
+</html>

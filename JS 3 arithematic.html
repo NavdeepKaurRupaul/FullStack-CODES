@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Arithmetic</title>
+	<style>
+		fieldset {
+			width: 50%;
+			padding: 10px;
+			margin-top: 20px;
+			background-color: #f4b2c7;
+			 background-image: linear-gradient(to right,pink, white, pink);
+			box-shadow: 0px 0px 20px black;
+		}
+
+		legend {
+			background-color: #7abef0;
+			padding: 10px;
+			font-size: 20px;
+			border: 1px solid blue;
+			border-radius: 20px;
+			box-shadow: 0px 0px 10px blue;
+		}
+
+		input[type="button"] {
+			padding: 10px;
+			margin: 15px;
+			border: 1px solid black;
+			transition: ease all 1s;
+/*			border-radius: 40px;*/
+			background-color: white;
+			background-color:#f2f59c; 
+		}
+
+		input[type="button"]:hover {
+			z-index: 1;
+			transform: scale(1.1);
+			box-shadow: 10px 10px 10px black;
+			background-color: black;
+			color: white;
+			transition: ease all 1s;
+			border: 1px solid white;
+/*			border-radius: 40px;*/
+
+		}
+
+		/*
+		input[type="button"]:active {
+			border-radius: 40px;
+			border: 0px solid black;
+		}
+*/
+
+		input[type="reset"] {
+			margin-left: 700px;
+			padding: 10px;
+			height: 50px;
+			background-color: skyblue;
+			transition: ease all 0.5s;
+
+		}
+
+		input[type="reset"]:hover {
+			transform: scale(1.1);
+			box-shadow: 0px 0px 10px black;
+			transition: ease all 0.5s;
+		}
+
+		#cl {
+			padding: 10px;
+			height: 50px;
+			background-color: skyblue;
+			transition: ease all 0.5s;
+			border-radius: 0px;
+		}
+
+		#cl:hover {
+			transform: scale(1.1);
+			box-shadow: 0px 0px 10px black;
+			transition: ease all 0.5s;
+			border: 1px solid black;
+			color: black;
+		}
+		#s{
+			border-radius: 0px; 
+			width: 80px;
+			font-size: 15px; 
+			font-weight: bold; 
+			background-color: #f2f59c;
+			transition: ease all 1s;
+		}
+		#s:hover{
+			color: black;
+			border: 1px solid black;
+			transform: rotate(360deg);
+			transition: ease all 2s;
+			box-shadow: 0px 0px 30px black;
+		}
+	</style>
+	<script>
+		function entername() {
+			var nn = prompt("Enter Name!");
+			document.frm.n.value = "Welcome!!" + " " + nn;
+		}
+
+		function divide() {
+			var a = document.frm.txtX.value;
+			var b = document.frm.txtY.value;
+			if (a == 0 && b == 0) {
+				alert("enter values");
+				return;
+			}
+			if (b > a || b==0) {
+				alert("division not possible");
+				return;
+			}
+			var c = a / b;
+			document.frm.r.value = c;
+			alert("Done");
+		}
+
+		function multiply() {
+			var a = document.frm.txtX.value;
+			var b = document.frm.txtY.value;
+			if (a == 0 && b == 0) {
+				alert("Enter values");
+				return;
+			}
+			else if(a==0 || b==0){
+				alert("one of the value is 0");
+				return;
+			}
+			var c = a * b;
+			document.frm.r.value = c;
+			alert("Done");
+		}
+
+		function modulus() {
+			var a = document.frm.txtX.value;
+			var b = document.frm.txtY.value;
+			if (a == 0 && b == 0) {
+				alert("enter values");
+				return;
+			}
+			var c = a % b;
+			document.frm.r.value = c;
+			alert("Done");
+		}
+
+		function sum() {
+			var a = parseInt(document.frm.txtX.value); //value returns string always
+			var b = parseInt(document.frm.txtY.value);
+			if (a == 0 && b == 0) {
+				alert("enter values");
+				return;
+			}
+			var c = a + b;
+			document.frm.r.value = c;
+			alert("Done");
+		}
+
+		function c() {
+			var resp = confirm("You Want to the Close Window??"); //it returns boolean
+			if (resp == true) {
+				alert("Window Closed Successfulllly");
+			} else
+				alert("Window Closing Canceled");
+		}
+
+	</script>
+</head>
+
+<body bgcolor="#f2f59c">
+	<center>
+		<fieldset>
+			<legend>Arithmetic Operations</legend>
+			<form name="frm">
+				<input type="button" onclick="entername();" value="Start" id="s">
+				<br>
+				<input type="text" name="n" style="text-align: center; background-color: skyblue; width: 600px; padding: 10px; font-size: 20px; box-shadow: 5px 5px 10px black">
+				<br><br><br><br>
+
+				Enter X <input type="text" name="txtX" autofocus  style="background-color: #f2f59c; padding: 5px">
+				<br><br><br>
+				Enter Y <input type="text" name="txtY" style="background-color: #f2f59c; padding: 5px">
+				<br><br><br>
+				<input type="button" value="Division" onclick="divide();">
+				<input type="button" value="Multiplication" onclick="multiply();">
+				<input type="button" value="Mod" onclick="modulus();">
+				<input type="button" value="Sum" onclick="sum();">
+				<br><br><br>
+				Result <input type="text" name="r" style="background-color: #f2f59c; padding: 5px">
+				<br><br>
+				<div style="display: flex">
+					<input type="button" value="Close" onclick="c();" id="cl">
+					<input type="reset" value="Clear All">
+				</div>
+
+			</form>
+		</fieldset>
+	</center>
+</body>
+
+</html>

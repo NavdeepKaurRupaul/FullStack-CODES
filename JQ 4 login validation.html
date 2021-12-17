@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>LOGIN PAGE</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="CSS/JQ_3_validation.css">
+	<script src="JS/jquery-1.8.2.min.js">
+	</script>
+	<script>
+		$(document).ready(function() {
+			//			alert();
+			//////////////////////////////////////////USERNAME////////////////////////////////////////////
+			$("#user_name").blur(function() {
+				var name = $(this).val();
+				if (name.length == 0) {
+					$("#addicon").removeClass("tick").addClass("cross");
+					$("#user_err").html("User name can't be empty");
+				}
+			})
+			$("#user_name").keyup(function() {
+				//				alert("yu");
+				var name = $(this).val();
+				if (name.length == 0) {
+					$("#addicon").removeClass("tick").addClass("cross");
+					$("#user_err").html("User name can't be empty");
+					$("#user_name").css("border", "2px solid red");
+				} else if (name.length <= 5) {
+					$("#user_err").html("");
+					$("#addicon").removeClass("tick").addClass("cross");
+					$("#user_err").html("Too short User name");
+					$("#user_name").css("border", "2px solid red");
+				} else {
+					$("#user_err").html("");
+					$("#user_err").html("Perfect");
+					$("#user_err").css("color", "green");
+					$("#addicon").removeClass("cross").addClass("tick");
+					$("#user_name").css("border", "2px solid green");
+				}
+			})
+			/*******************************************Password*****************************************/
+			$("#user_pass").keydown(function() {
+				var pass_size = $(this).val().length;
+				//				alert(pass_size)
+				if (pass_size <= 2) {
+					$("#color").css("background-color", "red");
+					$("#color").html("weak password");
+					$("#user_pass").css("border", "2px solid red");
+				} else if (pass_size > 2 && pass_size < 5) {
+					$("#color").css("background-color", "orange");
+					$("#color").html("normal password");
+					$("#user_pass").css("border", "2px solid orange");
+				} else if (pass_size >= 8) {
+					$("#color").css("background-color", "#0bff0b");
+					$("#color").html("strong password");
+					$("#user_pass").css("border", "2px solid green");
+				}
+			})
+			///////////////////////////////////////////ShowPassword///////////////////////////////////////
+			$(".fa").mousedown(function() {
+				$(this).removeClass("fa fa-eye-slash").addClass("fa fa-eye");
+				$("#user_pass").prop("type", "text");
+				var pass_size = $("#user_pass").val().length;
+				if (pass_size == 0) {
+					$("#color").html("Empty Password");
+				}
+			});
+			$(".fa").mouseup(function() {
+				$(this).removeClass("fa fa-eye").addClass("fa fa-eye-slash");
+				$("#user_pass").attr("type", "password");
+				var pass_size = $(this).val().length;
+//				if (pass_size == 0) {
+//					//					$("#color").html("");
+//				}
+			});
+		})
+
+	</script>
+</head>
+
+<body>
+	<div class="outer">
+		<div class="text">
+			LogIn Account
+		</div>
+		<div class="imgg">
+
+		</div>
+		<!------------------------------------------UserName---------------------------------------------->
+		<div class="user">
+			<div><input type="text" id="user_name" placeholder="username" size="40" class="user_pic"></div>
+			<div id="addicon"></div>
+		</div>
+		<div id="user_err"></div>
+		<!-----------------------------------------Password----------------------------------------------->
+		<div class="pass">
+			<div> <input type="password" placeholder="enter password" id="user_pass" size="40" class="pass_pic"></div>
+			<div id="eye">
+				<i class="fa fa-eye-slash" aria-hidden="true"></i>
+			</div>
+
+		</div>
+		<div id="color">
+			<!--------------------------------------Buttons---------------------------------------------->
+		</div>
+		<div class="button">
+			<div class="button1">
+				LogIn
+			</div>
+			<div class="button1 button2">
+				Create Account
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

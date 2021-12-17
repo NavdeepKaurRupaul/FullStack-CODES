@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+	
+		function doJoin(){
+			var fn=document.frm.txtFN.value;//value: always return string
+			var ln=document.frm.txtLN.value;
+			
+			var full="Hello Mr. "+fn+" "+ln+" *** ";
+			document.frm.txtFull.value=full;
+		}
+	</script>
+	<style>
+		fieldset{
+			width: 400px;;
+			padding: 20px;
+		}
+		legend{
+			padding: 5px;
+			background-color: purple;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<center>
+	<fieldset>
+	<legend>Name Joiner App</legend>
+		<form name="frm" >
+		
+			Enter F.Name: <input type="text" autofocus name="txtFN" placeholder="enter f.name"> <br>
+			<br>
+			Enter Last Name <input type="text" name="txtLN" placeholder="enter last name">
+			<br>
+			<br>
+			<input type="button" value="Join" onclick="doJoin();">
+			<input type="reset" value="Clear All">
+			<br>
+			<br>
+			Full Name <input type="text" name="txtFull" >
+		</form>
+	</fieldset>
+	</center>
+</body>
+</html>

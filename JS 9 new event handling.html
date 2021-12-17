@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+	function fun()
+		{
+			var refBtn=document.querySelector("#btn");
+			refBtn.addEventListener("click",doBaleBale);
+			function doBaleBale()
+			{
+				alert("Ho Gai Bale bale");
+			}
+			
+		}
+	
+	</script>
+</head>
+<body onLoad="fun();">
+
+	<center>
+		<button id="btn" >Click Here</button>
+	</center>
+	
+</body>
+</html>

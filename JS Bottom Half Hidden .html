@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head> 
+	<meta charset="UTF-8"> 
+	<meta http-equiv="X-UA-Compatible"
+				content="IE=edge"> 
+
+	<meta name="viewport" content= 
+		"width=device-width, initial-scale=1.0"> 
+
+	<style> 
+		* { 
+			padding: 0; 
+			margin: 0; 
+			box-sizing: border-box; 
+			overflow: hidden; 
+/*			background-color: black; */
+		} 
+		
+		.upper_text, 
+		.pointer { 
+			position: fixed; 
+			top: 40vh; 
+			left: 40vw; 
+			width: 350px; 
+			color: chartreuse; 
+			font-size: 50px; 
+			cursor: all-scroll; 
+		} 
+		
+		.upper_text { 
+			clip-path: polygon(0% 0%, 
+				100% 0%, 100% 50%, 0% 50%); 
+		} 
+	</style> 
+</head> 
+
+<body> 
+	<div class="upper_text"> 
+		Geeks For Geeks 
+	</div> 
+<!--<comment>HIIIIIIIIII</comment>-->
+	<div class="pointer"> 
+		Geeks For Geeks 
+	</div> 
+	<script> 
+		document.addEventListener('mousemove', (e) => { 
+			const pointer = document.querySelector('.pointer'); 
+			
+			pointer.style.clipPath = 
+			`circle(30px at ${e.offsetX}px ${e.offsetY}px)`; 
+		}); 
+	</script> 
+</body> 
+
+</html> 

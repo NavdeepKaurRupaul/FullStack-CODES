@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		.btn {
+			padding: 10px;
+			cursor: pointer;
+			width: 50px;
+			;
+			background-color: purple;
+			color: white;
+		}
+		.err{
+			color: gray;
+			font-family: cursive; float: right;
+			margin-top: 10px;
+			
+		}
+		.ok{
+			color: green;
+			width: 20px; height: 20px; background-image: url(Spics/ok.png); background-size: contain;
+		}
+		.not-ok{
+			color:red;
+			width: 20px; height: 20px; background-image: url(Spics/not.png); background-size: contain;
+		}
+	</style>
+	<link href="CSS/signup.css" rel="stylesheet">
+	<script src="js/jquery-1.8.2.min.js">
+	</script>
+	<script>
+		$(document).ready(function() {
+
+			$("#doSignup").click(showSignupWin);
+			function showSignupWin() {
+				//$("#signup-win").show(1000);
+				//$("#signup-win").slideDown(1000);;
+//				$("#signup-win").fadeIn(1000);
+//				$("#signup-win").slideToggle();
+//				$("#signup-win").slideToggle();
+				$("#signup-win").fadeToggle(1000);
+			}
+			//--------------------------
+			$("#cross").click(function() {
+				//$("#signup-win").fadeOut(1000);
+				//$("#signup-win").slideUp(1000);;
+				$("#signup-win").hide(1000);;
+
+			});
+			//--------------------
+			$("#txtUid").blur(function()
+				{
+				var uid=$(this).val();
+				if(uid.length==0)
+					{
+						$("#errUid").html("").removeClass("ok").addClass("not-ok");
+					}
+				else
+					{
+						$("#errUid").html("").addClass("ok").removeClass("not-ok");
+					}
+			});
+			//-----------------
+			/*$(".fa").click(function(){
+				if($(this).hasClass("fa-eye-slash"))
+				{
+					$(this).removeClass("fa fa-eye-slash").addClass("fa fa-eye");
+					$("#txtPwd").prop("type","text");
+				}
+				
+				else
+				{
+					$(this).removeClass("fa fa-eye").addClass("fa fa-eye-slash");
+							$("#txtPwd").attr("type","password");
+				}
+			});
+			*/
+			$(".fa").mousedown(function(){
+				
+					$(this).removeClass("fa fa-eye-slash").addClass("fa fa-eye");
+					$("#txtPwd").prop("type","text");
+			});
+			
+			$(".fa").mouseup(function(){
+					$(this).removeClass("fa fa-eye").addClass("fa fa-eye-slash");
+					$("#txtPwd").attr("type","password");
+			});
+
+		});
+	</script>
+</head>
+
+<body>
+
+	<!--  -->
+	<div id="signup-win">
+		<div id="cross"></div>
+		<table border="0" width="100%">
+			<tr>
+				<td align="center">
+					<img src="SPICS/userlogin.png" alt="">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>User Id</label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="text" id="txtUid" autofocus placeholder="fill user id here" maxlength="10" class="uid-pic">
+					
+					<div id="errUid" class="err"></div> 
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Password</label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="password" id="txtPwd"><i class="fa fa-eye-slash" aria-hidden="true"></i>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Mobile</label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="text" autofocus placeholder="10 digits mobile Number">
+					
+				</td>
+			</tr>
+
+			<tr>
+				<th>
+					<div class="btn">
+						Signup
+					</div>
+				</th>
+			</tr>
+		</table>
+	</div>
+	
+	
+	<!-- Buttons -->
+	<center>
+		<div class="btn" id="doSignup">
+			Signup
+		</div>
+	</center>
+
+</body></html>

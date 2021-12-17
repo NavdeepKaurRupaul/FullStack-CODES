@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>ElectricityBill</title>
+	<link rel="stylesheet" href="CSS/JS%202%20EB.css">
+	<script src="JS/2%20EBILL.js">
+	</script>
+</head>
+
+<body>
+	<center>
+		<div class="box">
+			<br>
+			<span style="font-size: 23px">UNITS CONSUMED </span>
+			<input type="text" style="background-color: #f2c274; font-size: 20px" placeholder="Enter total number of units consumed" size="29" id="units" onblur="unitsbill(this.value,ub);">
+			<br><br><br>
+			<!--AC-->
+			<div class="item">
+				<div class="text">
+					<input type="checkbox" onclick="check(this, ac)">AC
+					<br><br>
+					<input type="text" disabled id="ac" placeholder="Number of AC?" onblur="bill(this, actotal,tb);">
+				</div>
+			</div>
+			<!--Cooler-->
+			<div class="item">
+				<div class="text">
+					<input type="checkbox" onclick="check(this, cooler)">COOLER
+					<br><br>
+					<input type="text" disabled id="cooler" placeholder="Number of COOLER?" onblur="bill(this, coolertotal,tb);">
+				</div>
+			</div>
+			<!--Fan-->
+			<div class="item">
+				<div class="text">
+					<input type="checkbox" onclick="check(this, fan)">FAN
+					<br><br>
+					<input type="text" disabled id="fan" placeholder="Number of FAN?" onblur="bill(this, fantotal,tb);">
+				</div>
+			</div>
+			<br><br><br><br><br><br>
+			<b>
+				<!--Discount Type-->
+				<input type="radio" name="type" id="comdis" onclick="finddis(this,tb,dis)" disabled>Commerical(10%)
+				<input type="radio" name="type" id="resdis" onclick="finddis(this,tb,dis)" disabled>Residential(20%)
+			</b>
+			<br><br>
+			<!--Item Total Bill-->
+			<div class="item">
+				<!--AC bill-->
+				<div class="text">
+					AC BILL
+					<br><br>
+					<input type="text" id="actotal" placeholder="Ac bill is">
+				</div>
+			</div>
+			<!--Cooler bill-->
+			<div class="item">
+				<div class="text">
+					COOLER BILL
+					<br><br>
+					<input type="text" id="coolertotal" placeholder="Cooler bill is">
+				</div>
+			</div>
+			<!--Fan bill-->
+			<div class="item">
+				<div class="text">
+					FAN BILL
+					<br><br>
+					<input type="text" id="fantotal" placeholder="Fan bill is">
+					<br>
+				</div>
+			</div>
+			<br><br><br><br>
+			<!--Units BILL-->
+			<div id="bill">
+				<div class="item">
+					<div class="text">
+						UNITS BILL
+						<br><br>
+						<input type="text" id="ub" placeholder="Units consumed bill is">
+					</div>
+				</div>
+				<!--Total Bill-->
+				<div class="item">
+					<div class="text">
+						TOTAL BILL
+						<br><br>
+						<input type="text" id="tb" placeholder="Total bill w/o discount">
+					</div>
+				</div>
+			</div>
+			<!--Discount-->
+			<div id="bill">
+				<div class="item">
+					<div class="text">
+						DISCOUNT
+						<br><br>
+						<input type="text" id="dis" placeholder="Discounted amount is">
+					</div>
+				</div>
+				<!--Total bill after discount-->
+				<div class="item">
+					<div class="text">
+						TOTAL BILL-DISCOUNT
+						<br><br>
+						<input type="text" id=tbad placeholder="Total payable amount">
+					</div>
+				</div>
+			</div>
+		</div>
+	</center>
+</body>
+
+</html>

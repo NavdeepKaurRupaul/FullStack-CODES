@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script type="text/javascript">
+        function doHello() {
+            //console.log("Welcome Programmers...");
+            //document.write("Welcome Again....");
+            alert("Welcome last time...");
+        }
+
+        var glb1 = 101;
+
+        function doVarDecl() {
+            alert(glb1 + " " + blb2);
+            let qty; //local variables
+            alert(qty); //undefined
+
+            //x,y,z are local variables
+            var x = 23; //x is an integer
+            var y = 3.4; //y is float
+            var z = "Navdeep"; //z is string
+            alert("Hello : " + z);
+            z = 3;
+            alert(x + " " + y + " " + z);
+
+            pi = 3.14; //pi will be treated as global/conditional global
+            alert(pi);
+        }
+        var blb2 = 202;
+
+        function showValues() {
+            //alert(x);//invalid
+            alert(glb1 + "   " + blb2);
+            alert(pi);
+        }
+
+        function doFun() {
+            var otp = prompt("Enter OTP?"); //it always return string
+            var code = "123";
+
+            if (otp.length != 3) {
+                alert("Invalid length");
+                return;
+            }
+
+            if (otp == code)
+                alert("Valid");
+            else
+                alert("Invalid");
+        }
+
+        function doConfirm() {
+            var resp = confirm("R You Okayyyy??"); //it returns boolean
+            alert(resp);
+            if (resp == true) {
+                alert("Form Submitttteeeddd Successfulllly");
+            } else
+                alert("Its ok");
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <center>
+        <input type="button" value="Click Me" onClick="doHello();">
+        <input type="button" value="var declaration" onClick="doVarDecl();">
+        <input type="button" value="shopw Global Values" onClick="showValues();">
+        <br><br>
+        <input type="button" value="prompt" onclick="doFun();">
+        <br><br>
+        <input type="button" value="Confirm" onclick="doConfirm();">
+    </center>
+</body>
+
+</html>

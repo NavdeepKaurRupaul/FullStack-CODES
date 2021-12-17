@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		function doShowSelected() {
+			/* A listbox is an array of strings */
+			var list = document.querySelector("#techs");
+			var txt = document.querySelector("#txtTech");
+			var i;
+			var all = "";
+			for (i = 0; i < list.length; i++) {
+				if (list[i].selected == true) {
+					all = all + list[i].value + "\n";
+					//alert(list[i].value);
+				}
+			}
+			txt.value = all;
+		}
+
+		function doTechClick() {
+			var list = document.querySelector("#techs");
+			var txt = document.querySelector("#txtTech");
+			txt.value = list.value;
+		}
+
+		function doRemove(list) {
+			//alert(sindex);
+			var sindex = list.selectedIndex;
+			var resp = confirm("Sure?");
+			if (resp == true)
+				list.remove(sindex);
+		}
+
+		function doSelectAll() {
+			var list = document.querySelector("#techs");
+
+			var i;
+
+			for (i = 1; i < list.length; i++) {
+				list[i].selected = true;
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<center>
+		select Technologies you know:<br> <br>
+		<select id="techs" size="4" multiple onchange="doTechClick();" ondblclick="doRemove(this);">
+			<option value="none">Select</option>
+			<option value="cpp">C++</option>
+			<option value="java">Real Java</option>
+			<option value="Full Satck Web Dev">Full Stack Web Development</option>
+			<option value="MERN Satck">MERN Stack</option>
+		</select>
+		<br><br>
+		<button onclick="doShowSelected();">Show Selected</button>
+		<button onclick="doSelectAll();">Select All</button>
+		<br> <br>
+		Selected Technologies:
+		<br><textarea readonly rows="6" cols="20" type="text" readonly id="txtTech"></textarea>
+	</center>
+</body></html>

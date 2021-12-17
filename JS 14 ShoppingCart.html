@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Shopping</title>
+	<link rel="stylesheet" href="CSS/JS_Shopping.css">
+	<script src="JS/2%20js_shopping.js">
+	</script>
+</head>
+
+<body>
+	<center>
+		<div class="mainbox">
+			<div class="box11">
+				<div id="box11">
+					<div id="categoryy">
+						SELECT CATEGORY
+					</div>
+					<br>
+					<!--Category-->
+					<select name="" id="category" onchange="addoption(this,brands,price)">
+						<option value=""></option>
+						<option value="laptop">
+							Laptop
+						</option>
+						<option value="mobile">
+							Mobile
+						</option>
+					</select>
+				</div>
+			</div>
+			<div class="box1">
+				<div id="col1" style="margin-top: -35px">
+					<!--Brands-->
+					<div id="heading">
+						Brands avilable
+					</div>
+					<select name="" id="brands" multiple size="3" ondblclick="addtocart
+					(this,price,cart,pricecart, bill)" onclick="corresponding_price(this,price)">
+					</select>
+				</div>
+				<div id="col1" style="margin-top: -35px">
+					<div id="heading">
+						<!--Price-->
+						Price
+					</div>
+					<select name="" id="price" multiple size="3">
+
+					</select>
+				</div>
+			</div>
+			<div class="box1">
+				<div id="col1" style="margin-top: -30px">
+					<div id="heading">
+						<!--Cart-->
+						Items in cart
+					</div>
+					<select name="" id="cart" multiple size="3" onclick="selected_item_price(this, pricecart);" ondblclick="remove_from_cart(this,pricecart,bill);"></select>
+				</div>
+				<div id="col1" style="margin-top: -30px">
+					<div id="heading">
+						Price of selected item
+					</div>
+					<select name="" id="pricecart" multiple size="3"></select>
+				</div>
+			</div>
+			<div class="box1">
+				<div id="col1" style="margin-left: 180px ;margin-top: -30px; height: 80px">
+					<div id="heading" style="background-color: #fcb3cb; font-weight: bold">
+						<!--Bill-->
+						Total Bill
+					</div>
+					<input type="text" id="bill" readonly size="17" placeholder="Total payable amount is" style="margin-top: 10px">
+				</div>
+			</div>
+		</div>
+
+	</center>
+
+</body>
+
+</html>

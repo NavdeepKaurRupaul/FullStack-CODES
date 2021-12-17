@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src="js/1%20check%20box.js"></script>
+	<title>Document</title>
+</head>
+
+<body>
+	<center>
+		<h3>CheckBox App</h3>
+		<p>Technical Knowledge</p>
+		<br>
+		<input type="checkbox" id="chkAll" onclick="doCheckUncheckAll();">All <br><br>
+		<input type="checkbox" id="chkJ" value="Java">Java Tech.
+		<input type="checkbox" id="chkW" value="Web Dev"> Web Development
+		<input type="checkbox" id="chkC" value="CPP">C++
+		<br><br>
+		<input type="button" value="Click" onclick="processCheck();">
+		<br><br>
+		<div id="resCheck">*</div>
+		<hr>
+		<hr>
+		<h2>Radio-Button</h2>
+		<p>Branch</p>
+		<p>
+
+			<input type="radio" value="CSE" name="branch" id="radCse" onclick="doRadProcess(this.value);">Computer Science
+
+			<input type="radio" value="ECE" id="radEce" name="branch" onclick="doRadProcess(this.value);">Electronics
+			<br>
+		<div id="resBranch">*</div>
+		</p>
+		<hr>
+		<hr>
+		State: <br>
+		<select id="states" onchange="doShowSate(this.value);">
+			<option value="none">Select</option>
+			<option value="Punjab">Punjab</option>
+			<option value="Himachal">Himachal</option>
+			<option value="Haryana">Haryana</option>
+		</select>
+		<input type="button" value="Add new State" onclick="doAddState();">
+		<br><br><br><br><br><br><br><br><br><br><br>
+	</center>
+</body></html>
