@@ -1,0 +1,187 @@
+body {
+	background-color: #f0f0f0;
+}
+
+.container {
+	background-color: skyblue;
+	display: flex;
+	width: 98.5%;
+	padding: 10px;
+	border: 1px solid black;
+	border-radius: 30px;
+}
+
+.container > div {
+	background-color: antiquewhite;
+	padding: 10px;
+	width: 10px;
+	margin: 10px;
+}
+
+#dirC {
+	flex-direction: column;
+}
+
+#dirC > div {
+	margin: 10px
+}
+
+#dirCRev {
+	flex-direction: column-reverse;
+}
+
+#dirRRev {
+	flex-direction: row-reverse;
+}
+
+hr {
+	height: 5px;
+	background-color: black;
+}
+
+#wrap > div {
+	width: 60px;
+	text-align: center;
+}
+
+#wrapon {
+	flex-wrap: wrap;
+}
+
+#wrapon > div {
+	width: 60px;
+}
+
+#wraponr {
+	flex-wrap: wrap-reverse;
+}
+
+#wraponr > div {
+	width: 60px;
+}
+
+#just1 {
+	justify-content: center;
+}
+
+#just2 {
+	justify-content: flex-start;
+}
+
+#just3 {
+	justify-content: flex-end;
+}
+
+#just4 {
+	justify-content: space-around;
+}
+
+#just5 {
+	justify-content: space-between;
+}
+
+#just6 {
+	justify-content: space-evenly;
+}
+
+#a1 {
+	height: 150px;
+	align-items: center;
+}
+
+#a2 {
+	height: 150px;
+	align-items: flex-start;
+}
+
+#a3 {
+	height: 150px;
+	align-items: flex-end;
+}
+
+#a4 {
+	height: 150px;
+	align-items: stretch;
+}
+
+#b1 {
+	height: 200px;
+	flex-wrap: wrap;
+	align-content: space-between;
+}
+
+#b1 > div {
+	width: 60px;
+}
+
+#b2 {
+	height: 200px;
+	flex-wrap: wrap;
+	align-content: space-around;
+}
+
+#b2 > div {
+	width: 60px;
+}
+
+#b3 {
+	height: 200px;
+	flex-wrap: wrap;
+	align-content: stretch;
+}
+
+#b3 > div {
+	width: 60px;
+}
+
+#b4 {
+	height: 200px;
+	flex-wrap: wrap;
+	align-content: center;
+}
+
+#b4 > div {
+	width: 60px;
+}
+
+#b5 {
+	height: 200px;
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
+
+#b5 > div {
+	width: 60px;
+}
+
+#b6 {
+	height: 200px;
+	flex-wrap: wrap;
+	align-content: flex-end;
+}
+
+#b6 > div {
+	width: 60px;
+}
+
+#c {
+	align-items: center;
+	justify-content: center;
+}
+
+#g1 > div {
+	width: 50px;
+}
+
+#grow > div {
+	width: 50px;
+}
+
+#z1 {
+	flex-grow: 1;
+}
+
+#z1:hover {
+	flex-grow: 4.3;
+	cursor: pointer;
+}

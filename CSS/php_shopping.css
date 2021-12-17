@@ -1,0 +1,78 @@
+body {
+	background-image: url(../PICS/shopping.jpg)
+}
+
+table {
+	text-align: center;
+	background-color: transparent;
+	border-radius: 10px;
+	height: 180px;
+}
+
+td {
+	padding: 5px;
+	border-left: 3px solid blue;
+	border-top: 3px solid red;
+	border-bottom: 3px solid yellow;
+	border-right: 3px solid #0aff0a;
+	border-radius: 10px;
+	background-color: #6a6a6a;
+	color: white;
+	overflow: hidden;
+	margin-right: 10px;
+}
+
+.container {
+	width: 60%;
+	font-size: 25px;
+	height: 500px;
+	border-left: 5px solid blue;
+	border-top: 5px solid red;
+	border-bottom: 5px solid yellow;
+	border-right: 5px solid #0aff0a;
+	border-radius: 30px;
+	box-shadow: 0px 0px 20px black;
+	margin-top: 50px;
+	overflow: hidden;
+	background-image: url(../PICS/shoppingbags.jpg);
+	background-size: contain
+}
+
+.heading {
+	width: 100%;
+	background-image: linear-gradient(to right, white, #e95bf5, white);
+	color: white;
+	text-transform: uppercase;
+	margin-top: 20px;
+	box-shadow: inset 0px 0px 10px black;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+input[type="text"] {
+	text-align: center;
+	padding: 5px;
+	border-radius: 20px;
+	box-shadow: inset 0px 0px 10px black;
+	cursor: pointer;
+}
+
+input[type="submit"] {
+	margin-top: 30px;
+	box-shadow: inset 0px 0px 10px black;
+	padding: 5px;
+	width: 100px;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: bolder;
+	background-color: #7fff59;
+	border: 2px solid black;
+	border-radius: 20px
+}
+
+input[type="submit"]:hover {
+	transform: scale(1.1);
+	box-shadow: 0px 0px 20px black;
+	transition: ease all 0.5s;
+	cursor: pointer;
+}

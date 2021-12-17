@@ -1,0 +1,56 @@
+/* To reuse the style*/
+.btn{
+	padding: 10px;
+	background-color: darkviolet;
+	color: white;
+	width: 100px;
+	float: left;
+	cursor: pointer;
+	transition: ease all .5s;
+	text-align: center;
+
+}
+.spl{
+	width: 20px; height:17px;;
+	background-color: white; color: purple;
+	text-align: center;
+	border-radius: 50%;
+	padding: 2px;
+
+}
+.btn:hover{
+	border-radius:20px;
+	transition: ease all 1s;
+}
+.btn:active{
+	transform: translate(0px,5px);
+}
+/*Id Selector*/
+/*No reuse*/
+#login{
+	margin-left: 10px;;
+	padding: 10px;
+	background-color: darkviolet;
+	color: white;
+	width: 100px;
+	float: left;
+	cursor: pointer;
+
+}
+.spl2{
+	background-color: dodgerblue;
+}
+/*Type/Tag Selector*/
+a{
+	margin-left: 10px;;
+	padding: 10px;
+	background-color: darksalmon;
+	color: white;
+	width: 100px;
+	float: left;
+	text-align: center;
+	transition: ease all .5s;
+}
+a:hover{
+	background-color: bisque;
+}

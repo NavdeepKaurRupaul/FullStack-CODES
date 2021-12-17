@@ -1,0 +1,229 @@
+* {
+	margin: 0px;
+	align-content: center;
+}
+
+.whole {
+	float: left;
+	width: 100%
+}
+
+.bgimg {
+	background-image: url('../MY_WEB/51.jpg');
+	width: 100%;
+	height: 600px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.logo {
+	width: 50px;
+	float: left;
+	margin-top: 10px;
+	margin-left: 20px;
+	/*	background-color: yellow;*/
+	height: 50px;
+	border-radius: 50%;
+	transition: ease all 1.5s;
+}
+
+.logo:hover {
+	transform: rotate(360deg);
+	cursor: pointer;
+}
+
+.NK {
+	font-family: fantasy;
+	font-size: 30px;
+	color: white;
+	width: 190px;
+	margin-left: 10px;
+	transform: none;
+	float: left;
+	padding-top: 20px;
+}
+
+.NK:hover {
+	color: black;
+	cursor: pointer;
+}
+
+.menu {
+	padding-top: 20px;
+	float: right;
+	margin-left: 400px;
+/*	background-color: yellow;*/
+	width: 600px
+}
+
+.menu ol {
+	margin-left: 120px;
+	list-style: none;
+	margin-right: 10px;
+	/*	width: 100%;*/
+	float: left;
+}
+
+.menu li {
+	
+	float: right;
+	padding: 10px;
+	font-family: fantasy;
+	font-size: 20px;
+	color: white;
+	font-display: block;
+	margin-left: 10px;
+	margin-right: 10px;
+	transition: ease all 1s;
+	width: 80px;
+	text-align: center
+}
+
+.menu li:hover {
+	transform: scale(1.2);
+	transition: ease all 1s;
+	background-color: white;
+	color: black;
+	border-radius: 20px;
+	font-size: 20px;
+	border: 1px solid black;
+	box-shadow: 10px 10px 10px black;
+	cursor: pointer;
+}
+
+.my {
+	padding-left: 60px;
+	padding-top: 50px;
+	width: 200px;
+	padding 40px;
+	background-color: ;
+}
+
+.text {
+	text-align: end;
+	width: 900px;
+	margin-left: 50px;
+	font-size: 40px;
+	color: white;
+	font-family: monospace;
+	/*	background-color: yellow;*/
+	padding-top: 300px;
+}
+
+.p {
+	background-color: transparent;
+	border-radius: 20px;
+	font-size: 40px;
+}
+
+.p {
+	transition: ease all 1.2s;
+	margin-left: 300px;
+}
+
+.p:hover {
+	transform: scale(1.1);
+	background-color: #f0f0f0;
+	text-align: center;
+	transition: ease all 1.2s;
+	text-shadow: 5px 5px 8px black;
+	box-shadow: 15px 15px 15px black;
+	/*	width: 650px;*/
+}
+
+#read {
+	background-color: black;
+	margin-left: 50px;
+	font-size: 20px;
+	color: black;
+	border: 2px solid white;
+	width: 150px;
+	text-align: center;
+	transition: ease all 1.2s;
+	border-radius: 30px;
+}
+
+#read:hover {
+	color: black;
+	background-color: white;
+	border-radius: 30px;
+	transform: scale(1.1);
+	border-color: black;
+	transition: ease all 1.2s;
+}
+
+h2 {
+	font-family: monospace;
+	font-size: 30px
+}
+
+.galary {
+	margin-left: 50px;
+	background-color: ;
+	height: 2250px;
+	align-content: center;
+	float: left;
+	/*	background-color: yellow*/
+}
+
+.galary img {
+	-webkit-filter: grayscale(100%);
+	margin: 5px;
+	transition: ease all 1.5s;
+}
+
+.galary img:hover {
+	-webkit-filter: none;
+	cursor: pointer;
+	box-shadow: 10px 10px 10px black;
+	transform: scale(1.0);
+	transition: ease all 1.5s;
+	border-radius: 30px
+}
+
+.footerr {
+	width: 98%;
+	padding: 20px;
+	color: white;
+	word-spacing: 40px;
+	text-align: right;
+	background-color: #727272;
+	font-size: 50px;
+	float: left;
+
+}
+
+a {
+	color: white;
+	text-decoration: none;
+	transition: ease all 1s;
+}
+
+a:hover {
+	color: black;
+	transition: ease all 1s;
+
+}
+
+.footerC:hover {
+	color: yellow;
+	transform: scale(1.2);
+	cursor: pointer;
+
+}
+
+.copyright {
+	width: 200px;
+	text-align: left;
+	float: left;
+	word-spacing: 0px;
+	font-size: 20px;
+	cursor: pointer;
+
+}
+.togotop{
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+}

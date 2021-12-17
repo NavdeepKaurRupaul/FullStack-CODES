@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="angular.min.js">
+	
+	</script>
+	<script type="text/javascript">
+		var kuchModule=angular.module("kuchBhiModule",[]);
+		kuchModule.controller("kuchContoller",function($scope){
+			
+			$scope.txt="Welcome";
+			//----------------
+			$scope.fn;
+			$scope.ln;
+			$scope.doJoin=function()
+			{
+				$scope.full=$scope.fn+" "+$scope.ln;
+			}
+		});
+	</script>
+</head>
+<body ng-app="kuchBhiModule" ng-controller="kuchContoller">
+
+<p>
+	<input type="text" ng-model="txt"> <br> <br>
+	<input type="text" ng-model="txt"> <br><br>
+	{{txt}}
+</p>
+<hr>
+	<p>
+		F.Name: <input type="text" ng-model="fn" ng-keyup="doJoin();"> <br> <br>
+		Last.Name: <input type="text" ng-model="ln" ng-keyup="doJoin();"> <br>
+		<br> <input type="button" value="Join" ng-click="doJoin();">  <br>
+		Last.Name: <input type="text" ng-model="full"> <br> 
+		{{full}}
+	</p>
+</body>
+</html>

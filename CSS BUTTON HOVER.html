@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+	<style>
+		.btn{
+	padding: 10px;
+	background-color: darkviolet;
+	color: white;
+	width: 100px;
+	float: left;
+	cursor: pointer;
+	
+	text-align: center;
+
+}
+		.brdr{
+			margin-left: 400px;
+			border:7px red double;	/*double,dotted,dashed,solid*/
+			background-color: yellow;
+			color: black;
+			outline: 2px black solid;
+		}
+		
+		.brdr-2{
+			margin-left: 20px;;
+			background-color: lightcoral;
+			border-left:6px black solid;
+			border-right:6px black solid;
+		}
+		
+		.brdr-3{
+			margin-left: 20px;;
+			background-color: lightcoral;
+			border-right:6px gray solid;
+			border-bottom:6px gray solid;
+		}
+		
+		.brdr-3:hover{
+			margin-left: 20px;;
+			background-color: lightcoral;
+			border-left:6px gray solid;
+			border-top:6px gray solid;
+			
+			border-right:0px gray solid;
+			border-bottom:0px gray solid;
+		}
+		.btn:active{
+			transform: translate(5px,5px);
+		}
+	</style>
+</head>
+<body>
+	<div class="btn brdr" >Signup</div>
+	
+	<div class="btn brdr-2" >login</div>
+	
+	<div class="btn brdr-3" >login</div>
+	
+	
+</body>
+</html>

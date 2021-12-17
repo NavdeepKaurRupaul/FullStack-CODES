@@ -1,0 +1,117 @@
+.heading {
+    background-color: purple;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-family: monospace;
+}
+.button {
+    width: 90px;
+    height: 100px;
+    padding: 10px;
+    font-size: 90px;
+    background-color: white;
+    border: 100px purple solid;
+    border-radius: 50%;
+    color: purple;
+}
+.button:hover{
+    color: white;
+    background-color: purple;
+    border: 100px solid gray;
+    transform: translate(5px,5px);
+    border-radius: 30%;
+}
+img {
+    margin-left: 100px;
+    border: 10px white solid;
+    border-radius: 20px;
+    width: 300px;
+    height=400px;
+}
+.login{
+    float: right;
+    margin-left: 20px;
+    width: 80px;
+    height: 20px;
+    background-color: purple;
+    color: white;
+    padding: 10px;
+}
+.login:hover{
+    background-color: blueviolet;
+    border-radius: 20px;
+    color: black;
+    transform: translate(5px,5px);
+    border: 2px solid black;
+    cursor: pointer;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:active{
+    color: white;
+    text-decoration: none;
+}
+.ttable{
+    margin-left: 40px;
+    width:92%;
+}
+.ttd:hover{
+    color: green
+}
+.bottom{
+    width:100%;
+    height=200px;
+    color: white;
+    background-color: purple;
+    text-align: center;
+    font-size: 50px
+}
+.bottombttn{
+    font-size: 20px;
+    background-color: white;
+    text-align: center;
+    width: 200px;
+    padding: 2px;
+    border-radius: 10px;
+    color: black;
+    height: 20px;
+    margin-left: 42%
+}
+.bottombttn:hover{
+    background-color: black;
+    color: white;
+    transform: translate(2px,0px);
+    border-style: solid;
+}
+.end{
+    background-color: black;
+    color: white
+}
+.endicon{
+    background-color: white;
+    color:black;
+    margin-left: 5px;
+    text-align: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    font-size: 50px;
+    padding: 3px;
+    margin-left: 20px;
+    margin-right: 10px;
+    float: left;
+}
+.endicon:hover{
+    background-color: orangered;
+    color: white;
+}
+.tablee{
+    font-size: 20px;
+}
+.tablee td:hover{
+    color: greenyellow
+}

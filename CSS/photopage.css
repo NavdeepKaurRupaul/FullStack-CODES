@@ -1,0 +1,102 @@
+.roww {
+	width: 80%;
+	height: 600px;
+	margin-top: 100px;
+	float: left;
+	margin-left: 130px;
+	transition: ease all 1s;
+}
+
+.box1 {
+	width: 24.6%;
+	height: 500px;
+	float: left;
+	background-image: url(../MY_WEB/46.jpg);
+	background-position: center;
+	transition: ease all 0.5s;
+	background-repeat: no-repeat;
+}
+.box1:hover {
+	transform: scale(2.2);
+	z-index: 1;
+	background-size: contain;
+	background-repeat: no-repeat;
+	transition: ease all 1s;
+	cursor: pointer;
+}
+
+#box2 {
+	margin-left: 0.5%;
+	width: 24.6%;
+	height: 500px;
+	float: left;
+	background-position: center left;
+	background-image: url(../MY_WEB/38.jpg);
+	transition: ease all 0.5s;
+}
+
+#box2:hover {
+	transform: scale(2.2);
+	z-index: 1;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	transition: ease all 1s;
+	cursor: pointer;
+}
+
+.box3 {
+	width: 24.6%;
+	height: 500px;
+	float: left;
+	margin-left: 0.5%;
+	background-image: url(../MY_WEB/21.jpg);
+	background-position: center;
+	transition: ease all 0.5s;
+}
+
+.box3:hover {
+	transform: scale(2.2);
+	z-index: 1;
+	background-size: contain;
+	background-repeat: no-repeat;
+	transition: ease all 1s;
+	cursor: pointer;
+}
+
+.box4 {
+	width: 24.6%;
+	height: 500px;
+	float: left;
+	margin-left: 0.5%;
+	background-image: url(../MY_WEB/12.jpg);
+	background-position: center;
+	background-size: cover;
+	transition: ease all 0.5s;
+	float: left;
+	background-repeat: no-repeat;
+}
+
+.box4:hover {
+	transform: scale(2.2);
+	z-index: 1;
+	background-size: contain;
+	background-repeat: no-repeat;
+	transition: ease all 1s;
+	cursor: pointer;cursor: pointer;
+}
+.tab{
+	margin-top: 50px;
+	width: 100%;
+	height: 4665px;
+}
+tr,td{
+	padding: 10px
+}
+.end{
+	background-color: #b1acac;
+	margin-top: 800px;
+	width: 98%;
+	padding: 20px;
+	text-align: center;
+}

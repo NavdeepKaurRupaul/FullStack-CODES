@@ -1,0 +1,27 @@
+body {
+	background-color: ;
+}
+
+.container {
+	margin: 0 auto;
+	width: 700px;
+	height: 400px;
+	border: 1px solid lighten(black, 10);
+	display: flex;
+	align-items: center;
+}
+
+.item {
+	flex-grow: 1;
+	text-align: center;
+	margin: 10px;
+	height: 100px;
+	background-color: darkred;
+	position: relative;
+	border: 1px solid lighten(black, 10);
+	transition: ease all 1s;
+ }
+.item:hover {
+		flex-grow: 5;
+		background-color: yellow;
+	}
